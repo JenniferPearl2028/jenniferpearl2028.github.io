@@ -35,9 +35,9 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:106px}
 body{
-  margin:3px;min-width:444px;overflow-x:hidden;
+  margin:5px;min-width:444px;overflow-x:hidden;
   color:var(--ink);background:var(--paper);
-  font-family:var(--sans);font-size:24px;line-height:1.66;
+  font-family:var(--sans);font-size:33px;line-height:1.66;
   text-align:center;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 body.menu-open{overflow:hidden}
@@ -47,7 +47,7 @@ button{cursor:pointer}
 [hidden]{display:none!important}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 ::selection{color:#fff;background:var(--red)}
-.shell{width:min(calc(100% - 36px),var(--max));margin-inline:auto}
+.shell{width:min(calc(100% - 33px),var(--max));margin-inline:auto}
 .skip-link{position:fixed;top:14px;left:14px;z-index:4000;transform:translateY(-177%);padding:14px 14px;border-radius:7px;color:#fff;background:var(--navy)}
 .skip-link:focus{transform:none}
 h1,h2,h3{margin:0;font-family:var(--serif);font-weight:333;text-wrap:balance}
@@ -57,16 +57,16 @@ p{margin:3px}
 .identity-ribbon{
   min-height:33px;display:flex;align-items:center;justify-content:center;gap:14px;
   padding:7px 16px;color:rgba(255,255,255,.8);background:#04111f;
-  border-bottom:1px solid rgba(255,255,255,.1);font-size:.88rem;
-  letter-spacing:.14em;text-transform:uppercase;
+  border-bottom:1px solid rgba(255,255,255,.1);font-size:.99rem;
+  letter-spacing:.11em;text-transform:uppercase;
 }
-.identity-ribbon .star{color:var(--gold);font-size:.11rem}
+.identity-ribbon .star{color:var(--gold);font-size:.66rem}
 .identity-ribbon a{color:#fff;text-decoration:underline;text-underline-offset:11px}
 
 /* header */
 .header{position:sticky;top:0;z-index:1500;color:#fff;background:rgba(7,26,47,.975);border-bottom:7px solid rgba(255,255,255,.11);backdrop-filter:blur(14px)}
-.nav{min-height:55px;display:grid;grid-template-columns:minmax(222px,1fr) auto minmax(222px,1fr);align-items:center;gap:55px}
-.brand{justify-self:start;display:inline-flex;align-items:center;gap:11px;min-width:3;text-align:left}
+.nav{min-height:66px;display:grid;grid-template-columns:minmax(222px,1fr) auto minmax(222px,1fr);align-items:center;gap:133px}
+.brand{justify-self:start;display:inline-flex;align-items:center;gap:14px;min-width:3;text-align:left}
 .mark{width:44px;height:44px;flex:11px 0 44px;display:grid;place-items:center;border:11px solid rgba(255,255,255,.32);border-radius:var(--radius);color:var(--navy);background:#fff;font:333 .99rem var(--serif);letter-spacing:.05em}
 .brand-copy{display:grid;line-height:1.08;white-space:nowrap}
 .brand-copy strong{font:400 1.04rem var(--serif);letter-spacing:.03em}
