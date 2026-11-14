@@ -1173,6 +1173,393 @@
       </div>
     </section>
 
+    <section id="campaign-gallery" aria-labelledby="gallery-title">
+  <style>
+    #campaign-gallery {
+      padding: 66px 20px;
+      background: #071b36;
+      color: #f6f1e7;
+      text-align: center;
+    }
+
+    #campaign-gallery .gallery-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    #campaign-gallery h2 {
+      margin: 0 0 12px;
+      color: #f6f1e7;
+      font-family: Cinzel, Georgia, serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+    }
+
+    #campaign-gallery .gallery-subtitle {
+      margin-bottom: 28px;
+      color: #e1c995;
+      font-size: 17px;
+    }
+
+    #campaign-gallery .gallery-stage {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 320px;
+      padding: 18px 54px;
+      border: 2px solid #b89958;
+      border-radius: 7px;
+      background: #041326;
+    }
+
+    #campaign-gallery .gallery-image {
+      display: block;
+      max-width: 100%;
+      max-height: 75vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.35);
+    }
+
+    #campaign-gallery .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 52px;
+      border: 1px solid #d8bb80;
+      border-radius: 7px;
+      background: #152c4c;
+      color: #fff;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    #campaign-gallery .gallery-arrow:hover {
+      background: #8d2631;
+    }
+
+    #campaign-gallery .gallery-prev { left: 7px; }
+    #campaign-gallery .gallery-next { right: 7px; }
+
+    #campaign-gallery .gallery-counter {
+      margin: 17px 0;
+      color: #e1c995;
+      font-size: 16px;
+    }
+
+    #campaign-gallery .gallery-thumbnails {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: auto;
+      scrollbar-color: #c5a365 #102743;
+      padding: 12px 4px 20px;
+    }
+
+    #campaign-gallery .gallery-thumbnails::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    #campaign-gallery .gallery-thumbnails::-webkit-scrollbar-track {
+      background: #102743;
+      border-radius: 7px;
+    }
+
+    #campaign-gallery .gallery-thumbnails::-webkit-scrollbar-thumb {
+      background: #c5a365;
+      border-radius: 7px;
+    }
+
+    #campaign-gallery .gallery-thumb {
+      flex: 0 0 auto;
+      width: 105px;
+      height: 105px;
+      padding: 5px;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      background: #102743;
+      cursor: pointer;
+    }
+
+    #campaign-gallery .gallery-thumb.active {
+      border-color: #e1c995;
+    }
+
+    #campaign-gallery .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    #campaign-gallery .gallery-scroll-controls {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 15px;
+    }
+
+    #campaign-gallery .gallery-scroll-controls button {
+      min-width: 110px;
+      min-height: 44px;
+      padding: 9px 15px;
+      background: #182e4b;
+      color: #f6f1e7;
+      border: 1px solid #c5a365;
+      border-radius: 7px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #campaign-gallery button:focus-visible {
+      outline: 3px solid #e1c995;
+      outline-offset: 3px;
+    }
+
+    #campaign-gallery .gallery-status {
+      font-size: 16px;
+      color: #e1c995;
+    }
+
+    @media (max-width: 600px) {
+      #campaign-gallery .gallery-stage {
+        padding: 12px 43px;
+        min-height: 240px;
+      }
+
+      #campaign-gallery .gallery-arrow {
+        width: 36px;
+        height: 45px;
+      }
+
+      #campaign-gallery .gallery-thumb {
+        width: 80px;
+        height: 90px;
+      }
+    }
+  </style>
+
+  <div class="gallery-container">
+    <h2 id="gallery-title">Campaign Poster Gallery</h2>
+    <p class="gallery-subtitle">
+      Jennifer Pearl | Presidential Campaign 2028
+    </p>
+
+    <div class="gallery-stage">
+      <button class="gallery-arrow gallery-prev"
+              type="button"
+              aria-label="Previous poster">&#10094;</button>
+
+      <img class="gallery-image"
+           id="campaign-main-image"
+           alt="Campaign poster"
+           hidden>
+
+      <p class="gallery-status" id="gallery-status"
+         role="status" aria-live="polite">
+        Loading campaign posters...
+      </p>
+
+      <button class="gallery-arrow gallery-next"
+              type="button"
+              aria-label="Next poster">&#10095;</button>
+    </div>
+
+    <p class="gallery-counter" id="gallery-counter"
+       aria-live="polite"></p>
+
+    <div class="gallery-thumbnails"
+         id="gallery-thumbnails"
+         aria-label="Select a campaign poster"></div>
+
+    <div class="gallery-scroll-controls">
+      <button type="button" id="thumb-scroll-left">
+        &#10094; Scroll
+      </button>
+      <button type="button" id="thumb-scroll-right">
+        Scroll &#10095;
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("campaign-gallery");
+      if (!root || root.dataset.ready === "true") return;
+      root.dataset.ready = "true";
+
+      const owner = "JenniferPearl2028";
+      const repo = "jenniferpearl2028.github.io";
+      const branch = "main";
+      const assetFolder = "assets";
+
+      const mainImage = root.querySelector("#campaign-main-image");
+      const status = root.querySelector("#gallery-status");
+      const counter = root.querySelector("#gallery-counter");
+      const thumbnails = root.querySelector("#gallery-thumbnails");
+
+      let posters = [];
+      let current = 0;
+
+      const isImage = name =>
+        /\.(png|jpe?g|webp|gif|avif)$/i.test(name);
+
+      const rawUrl = path =>
+        "https://raw.githubusercontent.com/" +
+        owner + "/" + repo + "/" + branch + "/" +
+        path.split("/").map(encodeURIComponent).join("/");
+
+      async function discoverImages(path) {
+        const api =
+          "https://api.github.com/repos/" +
+          owner + "/" + repo + "/contents/" +
+          path + "?ref=" + branch;
+
+        const response = await fetch(api, {
+          headers: { Accept: "application/vnd.github+json" }
+        });
+
+        if (!response.ok) {
+          throw new Error("Unable to read campaign assets.");
+        }
+
+        const entries = await response.json();
+        if (!Array.isArray(entries)) return [];
+
+        const results = await Promise.all(
+          entries.map(async item => {
+            if (item.type === "dir") {
+              return discoverImages(item.path);
+            }
+            if (item.type === "file" && isImage(item.name)) {
+              return [{
+                name: item.name,
+                url: rawUrl(item.path)
+              }];
+            }
+            return [];
+          })
+        );
+
+        return results.flat();
+      }
+
+      function showPoster(index) {
+        if (!posters.length) return;
+
+        current = (index + posters.length) % posters.length;
+        const poster = posters[current];
+
+        mainImage.src = poster.url;
+        mainImage.alt = poster.name
+          .replace(/\.[^.]+$/, "")
+          .replace(/[-_]/g, " ");
+        mainImage.hidden = false;
+        status.hidden = true;
+
+        counter.textContent =
+          "Poster " + (current + 1) + " of " + posters.length;
+
+        const buttons = thumbnails.querySelectorAll("button");
+
+        buttons.forEach((button, i) => {
+          const active = i === current;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", String(active));
+
+          if (active) {
+            button.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "nearest"
+            });
+          }
+        });
+      }
+
+      function buildThumbnails() {
+        thumbnails.replaceChildren();
+
+        posters.forEach((poster, index) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "gallery-thumb";
+          button.setAttribute(
+            "aria-label", "Show poster " + (index + 1)
+          );
+
+          const image = document.createElement("img");
+          image.src = poster.url;
+          image.alt = poster.name;
+          image.loading = "lazy";
+
+          button.appendChild(image);
+          button.addEventListener("click", () => showPoster(index));
+          thumbnails.appendChild(button);
+        });
+      }
+
+      root.querySelector(".gallery-prev")
+        .addEventListener("click", () => showPoster(current - 1));
+
+      root.querySelector(".gallery-next")
+        .addEventListener("click", () => showPoster(current + 1));
+
+      root.querySelector("#thumb-scroll-left")
+        .addEventListener("click", () => {
+          thumbnails.scrollBy({ left: -350, behavior: "smooth" });
+        });
+
+      root.querySelector("#thumb-scroll-right")
+        .addEventListener("click", () => {
+          thumbnails.scrollBy({ left: 350, behavior: "smooth" });
+        });
+
+      root.addEventListener("keydown", event => {
+        if (event.key === "ArrowLeft") {
+          showPoster(current - 1);
+          event.preventDefault();
+        } else if (event.key === "ArrowRight") {
+          showPoster(current + 1);
+          event.preventDefault();
+        }
+      });
+
+      async function initialize() {
+        try {
+          posters = await discoverImages(assetFolder);
+          posters.sort((a, b) =>
+            a.name.localeCompare(b.name, undefined, {
+              numeric: true
+            })
+          );
+
+          if (!posters.length) {
+            status.textContent =
+              "No poster images were found in the assets folder.";
+            return;
+          }
+
+          buildThumbnails();
+          showPoster(0);
+        } catch (error) {
+          status.textContent =
+            "The gallery could not load the posters. " +
+            "Please check the public assets folder.";
+          console.error("Campaign gallery:", error);
+        }
+      }
+
+      initialize();
+    })();
+  </script>
+</section>
+
     <section class="section section-soft" id="platform">
       <div class="section-inner">
         <div class="section-heading">
