@@ -1,0 +1,1582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#091a30">
+<meta name="description" content="Jennifer Pearl for President 2028. Campaign information, public statements, platform proposals, and campaign artwork.">
+<title>Jennifer Pearl for President 2028</title>
+
+<style>
+:root {
+  --navy: #091a30;
+  --navy-light: #142b49;
+  --burgundy: #812c3b;
+  --cream: #fff8e9;
+  --parchment: #f7f1e5;
+  --paper: #fffdf8;
+  --ink: #202724;
+  --gold: #b48b45;
+  --border: #c7bba3;
+  --heading: Cinzel, Georgia, serif;
+  --body: "Brandon Grotesque", Nunito, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font: 400 18px/1.65 var(--body);
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading);
+  font-weight: 400;
+  line-height: 1.22;
+  margin: 0;
+}
+
+h2 { font-size: clamp(30px, 4vw, 44px); }
+h3 { font-size: clamp(23px, 2.5vw, 30px); }
+
+p { margin: 0; }
+
+.wrap {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 15px;
+  z-index: 100;
+  background: var(--cream);
+  color: var(--ink);
+  padding: 12px;
+}
+
+.skip-link:focus { top: 10px; }
+
+.section {
+  padding: clamp(50px, 6vw, 77px) 0;
+}
+
+.warm { background: var(--parchment); }
+.alternate { background: #eee6d9; }
+
+.dark {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.heading {
+  max-width: 890px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.heading h2 { margin-bottom: 13px; }
+
+.heading p:last-child {
+  max-width: 820px;
+  margin: auto;
+}
+
+.kicker {
+  font: 400 18px/1.5 var(--heading);
+  color: var(--burgundy);
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 49px;
+  padding: 11px 19px;
+  border: 1px solid var(--navy);
+  border-radius: 7px;
+  background: var(--navy);
+  color: var(--cream);
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+.button:hover { filter: brightness(1.15); }
+
+.button.light {
+  background: var(--cream);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+.button.red {
+  background: var(--burgundy);
+  border-color: var(--burgundy);
+}
+
+.button.outline {
+  background: transparent;
+  color: var(--navy);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 26px;
+}
+
+/* HEADER */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: var(--navy);
+  color: var(--cream);
+  border-bottom: 1px solid rgba(255,248,233,.24);
+}
+
+.header-inner {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  font: 400 22px/1.3 var(--heading);
+  text-decoration: none;
+}
+
+.brand small {
+  display: block;
+  color: #e7d5b4;
+  font: 400 16px/1.4 var(--body);
+}
+
+.nav {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a:hover { text-decoration: underline; }
+
+.menu-toggle {
+  display: none;
+  min-height: 44px;
+  padding: 8px 14px;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(55px, 7vw, 88px) 0;
+  text-align: center;
+  color: var(--cream);
+  background:
+    radial-gradient(
+      circle at 15% 5%,
+      rgba(156,40,65,.32),
+      transparent 35%
+    ),
+    linear-gradient(140deg, #081527, #112e52 62%, #071b36);
+}
+
+.hero::before {
+  content: "★  ★  ★  ★  ★";
+  position: absolute;
+  top: 22px;
+  right: 5%;
+  opacity: .14;
+  letter-spacing: .45em;
+}
+
+.hero-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 5px;
+  max-width: 220px;
+  margin: 0 auto 24px;
+}
+
+.hero-mark span:nth-child(1) { background: #a62b40; }
+.hero-mark span:nth-child(2) { background: var(--cream); }
+.hero-mark span:nth-child(3) { background: #34618b; }
+
+.eyebrow {
+  margin-bottom: 16px;
+  color: #ead5a9;
+  font: 400 clamp(19px, 2.4vw, 24px)/1.4 var(--heading);
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin: 0 auto 22px;
+  font-size: clamp(42px, 6vw, 66px);
+}
+
+.hero .lead {
+  max-width: 830px;
+  margin: 0 auto 16px;
+}
+
+.hero .note {
+  max-width: 840px;
+  margin: auto;
+  color: #e7ddcc;
+}
+
+.hero .button { border-color: var(--gold); }
+
+.hero .button.outline {
+  color: var(--cream);
+  border-color: #cdb781;
+}
+
+.hero-portrait {
+  display: block;
+  width: min(100%, 660px);
+  max-height: 350px;
+  object-fit: contain;
+  margin: 30px auto 0;
+  border: 1px solid rgba(255,248,233,.26);
+  border-radius: 7px;
+}
+
+/* CARDS */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card-grid.four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 27px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+.card p { flex: 1; }
+
+.card .number {
+  color: var(--burgundy);
+  font-size: 16px;
+}
+
+.card .button { margin-top: auto; }
+
+.dark .card {
+  background: #182d48;
+  color: var(--cream);
+  border-color: rgba(255,248,233,.25);
+}
+
+.dark .kicker { color: #e8c887; }
+.dark .heading p { color: #eaddc7; }
+
+/* POSTER GALLERY */
+
+.gallery {
+  padding: clamp(50px, 6vw, 77px) 0;
+  background: #0a1c34;
+  color: var(--cream);
+}
+
+.gallery .kicker { color: #e5c484; }
+.gallery .heading h2 { color: var(--cream); }
+.gallery .heading p:last-child { color: #eaddc4; }
+
+.gallery-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 22px 62px;
+  background: #071427;
+  border: 1px solid rgba(225,194,143,.5);
+  border-radius: 7px;
+}
+
+.gallery-stage img {
+  max-width: 100%;
+  max-height: min(72vh, 760px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 43px;
+  height: 52px;
+  color: var(--cream);
+  background: var(--navy-light);
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+  font-size: 26px;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.gallery-meta {
+  margin: 14px auto;
+  text-align: center;
+  color: #e8d6b5;
+  font-size: 16px;
+}
+
+.thumbs {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 12px 5px 17px;
+  scrollbar-width: auto;
+  scrollbar-color: var(--gold) var(--navy-light);
+}
+
+.thumbs button {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 105px;
+  padding: 4px;
+  background: #172f4f;
+  border: 2px solid transparent;
+  border-radius: 7px;
+}
+
+.thumbs button.active {
+  border-color: #ebc889;
+}
+
+.thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.thumb-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 13px;
+}
+
+.thumb-actions button {
+  min-height: 44px;
+  padding: 8px 15px;
+  color: var(--cream);
+  background: var(--navy-light);
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+.gallery-caption {
+  max-width: 850px;
+  margin: 18px auto 0;
+  color: #e1cfae;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* FEATURE */
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 28px;
+  padding: clamp(24px,4vw,44px);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+.feature h2 { margin-bottom: 16px; }
+.feature p + p { margin-top: 14px; }
+
+.feature img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+/* RESOURCE DIRECTORY */
+
+.resource-controls {
+  display: grid;
+  grid-template-columns: 1fr 220px auto;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.resource-controls input,
+.resource-controls select {
+  width: 100%;
+  min-height: 49px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+.resource-status {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 23px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+.resource-card h3 { font-size: 24px; }
+.resource-card p { flex: 1; }
+
+/* PUBLIC BOUNDARIES */
+
+.boundary {
+  max-width: 1000px;
+  margin: auto;
+  padding: clamp(24px,4vw,44px);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.boundary h2 { margin-bottom: 18px; }
+
+.boundary p {
+  max-width: 830px;
+  margin: 0 auto 20px;
+}
+
+.boundary-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  text-align: left;
+}
+
+.boundary-list div {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+
+.boundary-list strong {
+  display: block;
+  margin-bottom: 10px;
+  font: 400 22px/1.3 var(--heading);
+}
+
+/* FINAL SECTION */
+
+.final {
+  background: linear-gradient(140deg,#0a1d35,#143455);
+  color: var(--cream);
+  text-align: center;
+}
+
+.final h2 { margin-bottom: 16px; }
+
+.final p {
+  max-width: 850px;
+  margin: auto;
+}
+
+.final .kicker { color: #ebd0a2; }
+
+/* FOOTER */
+
+.footer {
+  padding: 35px 20px 44px;
+  background: #09182c;
+  color: var(--cream);
+  text-align: center;
+}
+
+.footer p { margin-bottom: 14px; }
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px 20px;
+}
+
+.footer a {
+  font-size: 16px;
+  text-underline-offset: 4px;
+}
+
+.footer small {
+  display: block;
+  margin-top: 18px;
+  font-size: 16px;
+  color: #e3d4be;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .card-grid,
+  .resource-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .feature { grid-template-columns: 1fr; }
+  .boundary-list { grid-template-columns: 1fr; }
+
+  .resource-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resource-controls button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrap { width: calc(100% - 28px); }
+
+  .header-inner {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .menu-toggle { display: block; }
+
+  .nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav.open { display: flex; }
+
+  .nav a { padding: 10px 0; }
+
+  .card-grid,
+  .card-grid.four,
+  .resource-grid,
+  .resource-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-controls button {
+    grid-column: auto;
+  }
+
+  .gallery-stage { padding: 15px 43px; }
+
+  .gallery-arrow {
+    width: 34px;
+    height: 44px;
+  }
+
+  .thumbs button {
+    flex-basis: 82px;
+    width: 82px;
+    height: 91px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, .thumbs { scroll-behavior: auto; }
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+
+    <a class="brand" href="#top">
+      Jennifer Pearl 2028
+      <small>Independent Presidential Campaign</small>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-controls="primaryNav"
+      aria-expanded="false">
+      ☰ Menu
+    </button>
+
+    <nav class="nav" id="primaryNav" aria-label="Campaign navigation">
+      <a href="#promise">Public Promise</a>
+      <a href="#campaign-gallery">Posters</a>
+      <a href="#platform">Platform</a>
+      <a href="#reform">Reform</a>
+      <a href="#network">Resources</a>
+      <a href="#about">About</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+
+<section class="hero" aria-labelledby="campaignTitle">
+  <div class="wrap">
+
+    <div class="hero-mark" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <p class="eyebrow">
+      Candidate for President of the United States
+    </p>
+
+    <h1 id="campaignTitle">
+      Jennifer Pearl<br>
+      for President 2028
+    </h1>
+
+    <p class="lead">
+      Transparency. Accountability. Government reform.
+      Leadership by the people, for the people—and a
+      public platform designed to keep every person
+      informed, educated, connected, and equipped
+      for everyday life.
+    </p>
+
+    <p class="note">
+      This campaign architecture is a working example of
+      the government philosophy behind it: public information
+      should be understandable, public resources should be
+      reachable, and leadership should remain answerable
+      to the people it serves.
+    </p>
+
+    <div class="actions">
+      <a class="button light"
+         href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html">
+        Read the National Platform
+      </a>
+
+      <a class="button outline"
+         href="https://vervenveda.github.io/theverifier.github.io/#columns">
+        Read Jennifer’s Editorials
+      </a>
+
+      <a class="button outline" href="#campaign-gallery">
+        View Campaign Posters
+      </a>
+    </div>
+
+    <img
+      class="hero-portrait"
+      src="assets/pearl%202028.png"
+      alt="Jennifer Pearl 2028 campaign artwork">
+
+  </div>
+</section>
+
+<!-- PUBLIC PROMISE -->
+
+<section class="section warm" id="promise"
+         aria-labelledby="promiseTitle">
+
+  <div class="wrap">
+
+    <div class="heading">
+      <p class="kicker">The Public Promise</p>
+
+      <h2 id="promiseTitle">
+        Government should be visible,
+        understandable, and accountable.
+      </h2>
+
+      <p>
+        The campaign is built around four connected
+        obligations: tell the public the truth,
+        show the work, repair systems that no longer
+        serve the people, and give citizens practical
+        ways to learn, participate, and make informed decisions.
+      </p>
+    </div>
+
+    <div class="card-grid four">
+
+      <article class="card">
+        <span class="number">01 / OPEN GOVERNMENT</span>
+        <h3>Transparency</h3>
+        <p>
+          Public decisions, evidence, priorities,
+          progress, and limitations should be
+          communicated in language people can
+          actually understand.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">02 / PUBLIC TRUST</span>
+        <h3>Accountability</h3>
+        <p>
+          Leadership must answer for its choices,
+          correct mistakes, protect public records,
+          and remain subject to meaningful public oversight.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">03 / SYSTEM REPAIR</span>
+        <h3>Government Reform</h3>
+        <p>
+          Institutions should be organized around
+          service, access, efficiency, constitutional
+          responsibility, and measurable benefit
+          to the public.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">04 / PEOPLE FIRST</span>
+        <h3>Public Leadership</h3>
+        <p>
+          The purpose of public office is not control
+          from above, but responsible leadership
+          with the people, for the people,
+          and in full view of the people.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- POSTER SLIDESHOW -->
+
+<section class="gallery"
+         id="campaign-gallery"
+         aria-labelledby="gallery-title">
+
+  <div class="wrap">
+
+    <div class="heading">
+      <p class="kicker">Campaign Artwork</p>
+
+      <h2 id="gallery-title">
+        Campaign Poster Gallery
+      </h2>
+
+      <p>
+        Explore the campaign’s published poster
+        collection, one image at a time.
+      </p>
+    </div>
+
+    <div class="gallery-stage">
+
+      <button
+        class="gallery-arrow gallery-prev"
+        id="galleryPrev"
+        type="button"
+        aria-label="Previous poster">
+        &#10094;
+      </button>
+
+      <img
+        id="galleryMain"
+        src="assets/pearl%202028.png"
+        alt="Campaign poster">
+
+      <p id="galleryLoading" hidden>
+        This poster could not load.
+      </p>
+
+      <button
+        class="gallery-arrow gallery-next"
+        id="galleryNext"
+        type="button"
+        aria-label="Next poster">
+        &#10095;
+      </button>
+
+    </div>
+
+    <p class="gallery-meta"
+       id="galleryCount"
+       aria-live="polite"></p>
+
+    <div
+      class="thumbs"
+      id="galleryThumbs"
+      aria-label="Choose a campaign poster">
+    </div>
+
+    <div class="thumb-actions">
+      <button id="thumbLeft" type="button">
+        ❮ Scroll
+      </button>
+
+      <button id="thumbRight" type="button">
+        Scroll ❯
+      </button>
+    </div>
+
+    <p class="gallery-caption">
+      Original artwork is shown without cropping.
+      Use the arrows, thumbnails, or keyboard
+      to change posters.
+    </p>
+
+  </div>
+</section>
+
+<!-- PLATFORM -->
+
+<section class="section alternate"
+         id="platform"
+         aria-labelledby="platformTitle">
+
+  <div class="wrap">
+
+    <div class="heading">
+      <p class="kicker">The Platform in Public</p>
+
+      <h2 id="platformTitle">
+        Read the ideas. Examine the evidence.
+        Follow the work.
+      </h2>
+
+      <p>
+        The campaign connects editorials,
+        policy proposals, constitutional education,
+        and public-service information so visitors
+        can explore the subjects in greater detail.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <h3>Jennifer’s Editorials</h3>
+        <p>
+          Public commentary, civic analysis,
+          campaign perspectives, and issue-focused writing.
+        </p>
+        <a class="button"
+           href="https://vervenveda.github.io/theverifier.github.io/#columns">
+          Open Editorial Desk
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>National Policy Proposals</h3>
+        <p>
+          Review the developing national platform
+          and policy proposals on public policy and reform.
+        </p>
+        <a class="button"
+           href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html">
+          Read National Policies
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>One Nation for All</h3>
+        <p>
+          Constitutional learning, civic participation,
+          voter access, public rights, and service information.
+        </p>
+        <a class="button"
+           href="https://vervenveda.github.io/onenationforall.github.io/">
+          Enter Civic Platform
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Constitutional Hall</h3>
+        <p>
+          Explore the Constitution, amendments,
+          government branches, history, and primary sources.
+        </p>
+        <a class="button"
+           href="https://vervenveda.github.io/onenationforall.github.io/apps/we_the_people_2_index.html">
+          Open Constitutional Hall
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Independent Education Resources</h3>
+        <p>
+          A separate public education provider,
+          linked for reference without merging
+          campaign and student accounts.
+        </p>
+        <a class="button" href="https://vervenveda.com/">
+          Independent Resource Website
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Campaign Documents</h3>
+        <p>
+          Access the campaign’s separately hosted
+          document repository and related publications.
+        </p>
+        <a class="button"
+           href="https://github.com/JenniferPearl2028/documents.github.io">
+          View Campaign Documents
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- GOVERNMENT REFORM -->
+
+<section class="section dark"
+         id="reform"
+         aria-labelledby="reformTitle">
+
+  <div class="wrap">
+
+    <div class="heading">
+      <p class="kicker">A Government Worthy of Public Trust</p>
+
+      <h2 id="reformTitle">
+        Reform begins with how leadership behaves.
+      </h2>
+
+      <p>
+        These principles describe the standards
+        presented by the campaign for public leadership.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <h3>Open Decisions</h3>
+        <p>
+          Explain what is being decided,
+          who is affected, what evidence is being used,
+          and what alternatives were considered.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Measurable Progress</h3>
+        <p>
+          State goals clearly, publish progress,
+          identify setbacks, and revise plans
+          when results do not serve the public.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Accessible Government</h3>
+        <p>
+          Organize services around plain language,
+          disability access, family needs,
+          and clear pathways to assistance.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Public Oversight</h3>
+        <p>
+          Protect records, strengthen review,
+          welcome scrutiny, and make it possible
+          for citizens to challenge errors.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Evidence Before Influence</h3>
+        <p>
+          Public policy should be guided by
+          constitutional duty, verifiable information,
+          and practical outcomes.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Continuous Participation</h3>
+        <p>
+          Citizens should have meaningful ways
+          to learn, respond, organize,
+          and propose solutions between elections.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORKING EXAMPLE -->
+
+<section class="section warm" id="example">
+
+  <div class="wrap">
+
+    <article class="feature">
+
+      <div>
+        <p class="kicker">A Working Example</p>
+
+        <h2>
+          Public systems should be understandable
+          and accessible.
+        </h2>
+
+        <p>
+          The campaign presents an interconnected
+          approach to civic information, public records,
+          and policy research. The associated independent
+          resources are operated separately and follow
+          their own terms and privacy practices.
+        </p>
+
+        <p>
+          This site is not a substitute for
+          official agencies or licensed professional advice.
+        </p>
+
+        <div class="actions">
+          <a class="button red"
+             href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html">
+            Review Policies
+          </a>
+
+          <a class="button outline" href="#network">
+            Find Resources
+          </a>
+        </div>
+      </div>
+
+      <img
+        src="assets/Red%20and%20Blue.png"
+        alt="Campaign graphic in red and blue"
+        loading="lazy">
+
+    </article>
+  </div>
+</section>
+
+<!-- CAMPAIGN DIRECTORY -->
+
+<section class="section alternate" id="network">
+
+  <div class="wrap">
+
+    <div class="heading">
+      <p class="kicker">Campaign & Civic Directory</p>
+
+      <h2>
+        Find campaign information and public references.
+      </h2>
+
+      <p>
+        Use the search or category filter to find
+        a relevant destination. Independent education
+        and civic resources remain separate from the campaign.
+      </p>
+    </div>
+
+    <div class="resource-controls">
+
+      <label class="sr-only" for="resourceSearch">
+        Search resources
+      </label>
+      <input
+        id="resourceSearch"
+        type="search"
+        placeholder="Search public resources…">
+
+      <label class="sr-only" for="resourceGroup">
+        Filter category
+      </label>
+      <select id="resourceGroup">
+        <option value="all">All categories</option>
+        <option value="Campaign">Campaign</option>
+        <option value="Public reference">Public reference</option>
+      </select>
+
+      <button class="button"
+              id="clearSearch"
+              type="button">
+        Clear Search
+      </button>
+
+    </div>
+
+    <p class="resource-status"
+       id="resourceStatus"
+       aria-live="polite"></p>
+
+    <div class="resource-grid" id="resourceGrid"></div>
+
+  </div>
+</section>
+
+<!-- BOUNDARIES -->
+
+<section class="section warm" id="about">
+
+  <div class="wrap">
+
+    <article class="boundary">
+
+      <p class="kicker">Clear Public Boundaries</p>
+
+      <h2>
+        Visitors should always know where they are.
+      </h2>
+
+      <p>
+        This is an independent presidential campaign
+        and civic-information website. It is not a
+        government website and cannot make official
+        agency determinations. The campaign,
+        its supporters, and its communication tools
+        are distinct from Verve N Veda and Khaemenes Academy
+        student services, records, and educational contributions.
+      </p>
+
+      <div class="boundary-list">
+
+        <div>
+          <strong>Campaign</strong>
+          Policy positions, public statements,
+          artwork, and campaign communications.
+        </div>
+
+        <div>
+          <strong>Independent Resources</strong>
+          Externally linked research and educational
+          content operated under separate policies.
+        </div>
+
+        <div>
+          <strong>Official Sources</strong>
+          Government agencies remain authoritative
+          for elections, applications, records,
+          and eligibility.
+        </div>
+
+      </div>
+
+    </article>
+  </div>
+</section>
+
+<!-- FINAL -->
+
+<section class="section final" aria-labelledby="finalTitle">
+
+  <div class="wrap">
+
+    <p class="kicker">Leadership in the Open</p>
+
+    <h2 id="finalTitle">
+      Government belongs to the people.
+    </h2>
+
+    <p>
+      This page provides access to Jennifer Pearl’s
+      2028 campaign materials, platform proposals,
+      and public resources.
+    </p>
+
+    <div class="actions">
+      <a class="button light"
+         href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html">
+        Read the National Platform
+      </a>
+
+      <a class="button outline"
+         href="#top"
+         style="color:var(--cream);border-color:var(--gold)">
+        Back to Top
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <p>Jennifer Pearl 2028 · Independent Campaign Website</p>
+
+  <nav aria-label="Footer navigation">
+    <a href="#promise">Public Promise</a>
+    <a href="#campaign-gallery">Posters</a>
+    <a href="#platform">Platform</a>
+    <a href="#network">Directory</a>
+    <a href="#about">Boundaries</a>
+    <a href="#top">Back to Top</a>
+  </nav>
+
+  <small>
+    Not an official U.S. government website.
+    © <span id="year">2026</span> Jennifer Pearl 2028.
+  </small>
+
+</footer>
+
+<!-- INTERACTIVE FEATURES -->
+
+<script>
+(() => {
+  "use strict";
+
+  /* YEAR */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  /* MOBILE NAVIGATION */
+
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("primaryNav");
+
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* CAMPAIGN POSTERS */
+
+  const names = [
+    "pearl 2028.png",
+    "Library - 7 of 28.png",
+    "Red and Blue.png",
+    "affordability.png",
+    "clean water poster.png",
+    "hand count.png",
+    "human rights poster.png",
+    "issues poster.png",
+    "no prejudice.png",
+    "one door no wrong door.png",
+    "people before politics headshot.png",
+    "protect the vulnerable.png",
+    "racism wedge.png",
+    "safe food.png",
+    "veterans.png",
+    "watercolor.png",
+    "what color.png",
+    "write in candidate serious headshot.png",
+    "write in headshot.png",
+    "you have a right poster.png",
+    "headshot.png",
+    "no party headshot.png"
+  ];
+
+  const posters = names.map(name => ({
+    name,
+    url: "assets/" + encodeURIComponent(name)
+  }));
+
+  const image = document.getElementById("galleryMain");
+  const count = document.getElementById("galleryCount");
+  const thumbs = document.getElementById("galleryThumbs");
+  const galleryStatus = document.getElementById("galleryLoading");
+
+  let index = 0;
+
+  function showPoster(i) {
+    index = (i + posters.length) % posters.length;
+
+    const poster = posters[index];
+
+    image.src = poster.url;
+    image.alt = poster.name
+      .replace(/\.png$/i, "")
+      .replace(/[-_]/g, " ");
+
+    count.textContent =
+      "Poster " + (index + 1) +
+      " of " + posters.length +
+      " · " + image.alt;
+
+    thumbs.querySelectorAll("button").forEach((button, j) => {
+      const active = j === index;
+
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+
+      if (active) {
+        button.scrollIntoView({
+          block: "nearest",
+          inline: "nearest",
+          behavior: window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches ? "instant" : "smooth"
+        });
+      }
+    });
+  }
+
+  posters.forEach((poster, i) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.setAttribute("aria-label", "Show " + poster.name);
+
+    const thumbImage = document.createElement("img");
+    thumbImage.src = poster.url;
+    thumbImage.alt = "";
+    thumbImage.loading = "lazy";
+
+    button.appendChild(thumbImage);
+    button.addEventListener("click", () => showPoster(i));
+
+    thumbs.appendChild(button);
+  });
+
+  document.getElementById("galleryPrev")
+    .addEventListener("click", () => showPoster(index - 1));
+
+  document.getElementById("galleryNext")
+    .addEventListener("click", () => showPoster(index + 1));
+
+  document.getElementById("thumbLeft")
+    .addEventListener("click", () => {
+      thumbs.scrollBy({ left: -350, behavior: "smooth" });
+    });
+
+  document.getElementById("thumbRight")
+    .addEventListener("click", () => {
+      thumbs.scrollBy({ left: 350, behavior: "smooth" });
+    });
+
+  document.getElementById("campaign-gallery")
+    .addEventListener("keydown", event => {
+      if (event.key === "ArrowRight") {
+        showPoster(index + 1);
+        event.preventDefault();
+      }
+
+      if (event.key === "ArrowLeft") {
+        showPoster(index - 1);
+        event.preventDefault();
+      }
+    });
+
+  image.addEventListener("error", () => {
+    galleryStatus.hidden = false;
+    galleryStatus.textContent = "This poster could not load.";
+  });
+
+  image.addEventListener("load", () => {
+    galleryStatus.hidden = true;
+  });
+
+  showPoster(0);
+
+  /* PUBLIC RESOURCES */
+
+  const resources = [
+    {
+      title: "Campaign Homepage",
+      cat: "Campaign",
+      url: "https://jenniferpearl2028.github.io/",
+      description: "Jennifer Pearl 2028 campaign overview."
+    },
+    {
+      title: "Campaign Policy Repositories",
+      cat: "Campaign",
+      url: "https://github.com/JenniferPearl2028/policies.github.io",
+      description: "Campaign policy materials and source repository."
+    },
+    {
+      title: "Campaign Issues",
+      cat: "Campaign",
+      url: "https://github.com/JenniferPearl2028/issues.github.io",
+      description: "Campaign issue materials."
+    },
+    {
+      title: "Campaign Press",
+      cat: "Campaign",
+      url: "https://github.com/JenniferPearl2028/press.github.io",
+      description: "Campaign press repository."
+    },
+    {
+      title: "National Policy Proposals",
+      cat: "Public reference",
+      url: "https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html",
+      description: "Externally hosted policy proposal reference."
+    },
+    {
+      title: "Constitutional Hall",
+      cat: "Public reference",
+      url: "https://vervenveda.github.io/onenationforall.github.io/apps/we_the_people_2_index.html",
+      description: "Independent constitutional learning reference."
+    },
+    {
+      title: "The Verifier Editorials",
+      cat: "Public reference",
+      url: "https://vervenveda.github.io/theverifier.github.io/#columns",
+      description: "Externally hosted public commentary."
+    }
+  ];
+
+  const search = document.getElementById("resourceSearch");
+  const filter = document.getElementById("resourceGroup");
+  const grid = document.getElementById("resourceGrid");
+  const status = document.getElementById("resourceStatus");
+
+  function drawResources() {
+    const query = search.value.trim().toLowerCase();
+    const group = filter.value;
+
+    const results = resources.filter(resource => {
+      const matchesGroup =
+        group === "all" || resource.cat === group;
+
+      const matchesSearch =
+        [resource.title, resource.description, resource.cat]
+          .join(" ")
+          .toLowerCase()
+          .includes(query);
+
+      return matchesGroup && matchesSearch;
+    });
+
+    grid.replaceChildren();
+
+    results.forEach(resource => {
+      const article = document.createElement("article");
+      article.className = "resource-card";
+
+      const title = document.createElement("h3");
+      title.textContent = resource.title;
+
+      const description = document.createElement("p");
+      description.textContent = resource.description;
+
+      const link = document.createElement("a");
+      link.className = "button";
+      link.textContent = "Open Resource";
+      link.href = resource.url;
+
+      article.append(title, description, link);
+      grid.appendChild(article);
+    });
+
+    status.textContent =
+      results.length +
+      " resource" +
+      (results.length === 1 ? "" : "s") +
+      " shown";
+  }
+
+  search.addEventListener("input", drawResources);
+  filter.addEventListener("change", drawResources);
+
+  document.getElementById("clearSearch")
+    .addEventListener("click", () => {
+      search.value = "";
+      filter.value = "all";
+      drawResources();
+      search.focus();
+    });
+
+  drawResources();
+
+})();
+</script>
+
+</body>
+</html>
